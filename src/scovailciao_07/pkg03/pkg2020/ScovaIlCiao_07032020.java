@@ -84,25 +84,39 @@ public class ScovaIlCiao_07032020 {
         System.out.print("Ok, per cominciare devi sapere che hai a disposizione " + xmatrice + " colonne");
         System.out.println(" e " + ymatrice + " righe. Non uscire dai bordi!");
         System.out.println("Cominciamo! ");
-        while (matrice[x_sparata][y_sparata] != 1) {
-            while (x_sparata < 0 && x_sparata >= xmatrice) {
+        while (matrice[x_sparata][y_sparata] != 1) 
+        {
+            while (x_sparata > 0 && x_sparata <= xmatrice) 
+            {
                 System.out.println("inserisci la x del punto che pensi sia corretto! ");
                 x_sparata = scannervar.nextInt();
                 if (x_sparata < 0 || x_sparata >= xmatrice) {
                     System.out.print("inserisci una x valida! ");
                 }
             }
-            while (y_sparata < 0 && y_sparata >= xmatrice) {
+            while (y_sparata > 0 && y_sparata <= xmatrice) 
+            {
                 System.out.println("inserisci la y del punto che pensi sia corretto! ");
                 y_sparata = scannervar.nextInt();
                 if (y_sparata < 0 || y_sparata >= xmatrice) {
                     System.out.print("inserisci una y valida! ");
                 }
             }
-            if (aiuti == 1) {
-                if () {
-                    System.out.println("Hai sbagliato, ma ecco un indizio: ");          //mi sono fermato qui per ora. 
-                }
+            if (aiuti == 1) 
+            {
+                System.out.print("Hai sbagliato, ma ecco un indizio: ");
+                if(y_sparata==coordy)
+                    System.out.print("hai beccato la y e ");
+                if(y_sparata>coordy)
+                    System.out.print("è più in basso e ");
+                if(y_sparata<coordy)
+                    System.out.print("è più in alto e ");
+                if(x_sparata==coordy)
+                    System.out.print("hai beccato la x.");
+                if(x_sparata>coordx)
+                    System.out.print("più a sinistra.");
+                if(x_sparata<coordx)
+                    System.out.print("più a destra.");
             }
         }
 
